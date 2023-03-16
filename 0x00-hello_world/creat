@@ -1,0 +1,12 @@
+#!/bin/bash
+echo -n "File name: "
+read name
+echo -n "Command line: "
+read cmd
+echo "#!/bin/bash" > $name
+echo $cmd >> $name
+chmod 777 $name
+git add .
+git commit -m "$name"
+git push
+
