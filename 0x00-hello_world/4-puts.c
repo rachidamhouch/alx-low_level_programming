@@ -4,6 +4,7 @@
 
 /**
  * main - puts
+ * return: 0
  */
 
 int	main(void)
