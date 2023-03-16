@@ -4,7 +4,7 @@
 
 /**
  * main - puts
- * return: 0
+ * return: 0 if the program finish whitout errors
  */
 
 int	main(void)
