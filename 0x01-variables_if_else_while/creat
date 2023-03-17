@@ -1,7 +1,9 @@
 #!/bin/bash
 echo -n "File name: "
 read name
-cp main.c $name
+echo -n "The file you want to copy: "
+read copy
+cp $copy $name
 vim $name
 git add .
 git commit -m "$name"
