@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+ * alx_putnbr - prints numbers < 1000
+ * @n: first parameter 
+ */
 void	alx_putnbr(int n)
 {
 	if (n < 10)
