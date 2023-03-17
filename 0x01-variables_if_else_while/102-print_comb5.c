@@ -4,7 +4,7 @@
 
 /**
  * alx_putnbr - prints numbers < 1000
- * @n: first parameter 
+ * @n:first parameter 
  */
 void	alx_putnbr(int n)
 {
