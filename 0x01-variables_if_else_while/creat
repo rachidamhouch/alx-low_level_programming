@@ -1,0 +1,8 @@
+#!/bin/bash
+echo -n "File name: "
+read name
+cp main.c $name
+vim $name
+git add .
+git commit -m "$name"
+git push
