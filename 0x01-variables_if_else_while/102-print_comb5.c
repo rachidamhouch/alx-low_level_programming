@@ -22,8 +22,27 @@ void	alx_putnbr(int n)
  */
 int	main(void)
 {
-	alx_putnbr(0);
-	alx_putnbr(1);
-	alx_putnbr(20);
+	int i;
+	int	j;
+
+	i = 0;
+	while (i < 100)
+	{
+		j = i + 1;
+		while (j < 100)
+		{
+			alx_putnbr(i);
+			putchar(' ');
+			alx_putnbr(j);
+			if (i != 98 || j != 99)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			j++;
+		}
+		i++;
+	}
+	putchar('\n');
 	return (0);
 }
