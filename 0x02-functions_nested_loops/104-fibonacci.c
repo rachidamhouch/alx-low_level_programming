@@ -6,22 +6,42 @@
 int	main(void)
 {
 	int			i;
-	unsigned long int	fib1;
-	unsigned long int	fib2;
-	unsigned long int	next;
+	long int	fib1;
+	long int	fib2;
+	long int	fib3;
+	long int	fib4;
+	long int	next;
+	long int	next1;
 
 	fib1 = 1;
 	fib2 = 2;
 	i = 2;
-	printf("%lu, %lu, ", fib1, fib2);
-	while (i <= 98)
+	printf("%ld, %ld, ", fib1, fib2);
+	while (i < 91)
 	{
 		next = fib1 + fib2;
-		printf("%lu", next);
-		if (i != 98)
-			printf(", ");
+		printf("%ld, ", next);
 		fib1 = fib2;
 		fib2 = next;
+		i++;
+	}
+	fib3 = fib1 % 1000000000;
+	fib1 = fib1 / 1000000000;
+	fib4 = fib2 % 1000000000;
+	fib2 = fib2 / 1000000000;
+	while (i < 98)
+	{
+		next = fib1 + fib2;
+		next += (fib3 + fib4) / 1000000000;
+		next1 = (fib3 + fib4) % 1000000000;
+		printf("%ld", next);
+		printf("%ld", next1);
+		if (i != 97)
+			printf(", ");
+		fib1 = fib2;
+		fib3 = fib4;
+		fib2 = next;
+		fib4 = next1;
 		i++;
 	}
 	printf("\n");
