@@ -6,7 +6,10 @@
 void	alx_putnbr(int n)
 {
 	if (n < 10)
+	{
+		putchar(' ');
 		putchar('0' + n);
+	}
 	else
 	{
 		putchar('0' + n / 10);
@@ -28,12 +31,12 @@ void times_table(void)
 		j = 0;
 		while (j < 10)
 		{
-			if (i * j < 10)
-				putchar(' ');
 			alx_putnbr(i * j);
 			if (j != 9)
+			{
 				putchar(',');
-			putchar(' ');
+				putchar(' ');
+			}
 			j++;
 		}
 		putchar('\n');
