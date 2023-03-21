@@ -21,6 +21,7 @@ void	alx_putnbr(int n, int m)
 
 /**
  * print_times_table - function that prints the n times table, starting with 0.
+ * @n: first parameter.
  */
 void print_times_table(int n)
 {
@@ -30,13 +31,13 @@ void print_times_table(int n)
 	i = 0;
 	if (n >= 0 && n <= 15)
 	{
-		while (i < n)
+		while (i <= n)
 		{
 			j = 0;
-			while (j < n)
+			while (j <= n)
 			{
 				alx_putnbr(i, j);
-				if (j != 9)
+				if (j != n)
 				{
 					putchar(',');
 					putchar(' ');
