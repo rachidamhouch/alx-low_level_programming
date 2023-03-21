@@ -20,7 +20,7 @@ void	alx_putnbr(int n)
 /**
  * jack_bauer - function that prints every minute of the day.
  */
-void jack_bauer()
+void jack_bauer(void)
 {
 	int		h;
 	int		m;
@@ -30,11 +30,14 @@ void jack_bauer()
 	while (h < 24)
 	{
 		alx_putnbr(h);
-		write(1, ":", 1);
+		putchar(':');
 		alx_putnbr(m);
-		write(1, "\n", 1);
+		putchar('\n');
 		m++;
 		if (m == 60)
+		{
 			h++;
+			m = 0;
+		}
 	}
 }
