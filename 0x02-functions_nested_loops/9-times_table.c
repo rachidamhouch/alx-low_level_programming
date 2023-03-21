@@ -31,9 +31,9 @@ void times_table(void)
 			alx_putnbr(i * j);
 			if (j != 9)
 				putchar(',');
+			putchar(' ');
 			if (i * j < 10)
 				putchar(' ');
-			putchar(' ');
 			j++;
 		}
 		putchar('\n');
