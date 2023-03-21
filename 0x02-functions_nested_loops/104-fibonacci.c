@@ -13,12 +13,12 @@ int	main(void)
 	fib1 = 1;
 	fib2 = 2;
 	i = 2;
-	printf("%ld, %ld, ", fib1, fib2);
-	while (i < 98)
+	printf("%lu, %lu, ", fib1, fib2);
+	while (i <= 98)
 	{
 		next = fib1 + fib2;
-		printf("%ld", next);
-		if (i != 49)
+		printf("%lu", next);
+		if (i != 98)
 			printf(", ");
 		fib1 = fib2;
 		fib2 = next;
