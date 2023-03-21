@@ -6,12 +6,7 @@
 int	main(void)
 {
 	int			i;
-	long int	fib1;
-	long int	fib2;
-	long int	fib3;
-	long int	fib4;
-	long int	next;
-	long int	next1;
+	long int	fib1, fib2, fib3, fib4, next, next1;
 
 	fib1 = 1;
 	fib2 = 2;
