@@ -4,14 +4,14 @@
  * Return: 0 if the program finish whitout errors
  * @index: First arg.
  */
-int	fibonacci(int index)
+long	fibonacci(int index)
 {
 	if (index < 0)
 		return (-1);
 	if (index == 0)
-		return (0);
-	if (index == 1)
 		return (1);
+	if (index == 1)
+		return (2);
 	return (fibonacci(index - 1) + fibonacci(index - 2));
 }
 
@@ -21,6 +21,8 @@ int	fibonacci(int index)
  */
 int	main(void)
 {
-	printf("%d\n", fibonacci(0));
+	int	i;
+	while (i < 50)
+		printf("%ld\n", fibonacci(i++));
 	return (0);
 }
