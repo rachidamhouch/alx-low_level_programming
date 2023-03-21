@@ -16,12 +16,12 @@ int	main(void)
 	printf("%ld, %ld, ", fib1, fib2);
 	while (i < 50)
 	{
-	    next = fib1 + fib2;
-	    printf("%ld", next);
-		if (i != 50)
+		next = fib1 + fib2;
+		printf("%ld", next);
+		if (i != 49)
 			printf(", ");
-	    fib1 = fib2;
-	    fib2 = next;
+		fib1 = fib2;
+		fib2 = next;
 		i++;
 	}
 	printf("\n");
