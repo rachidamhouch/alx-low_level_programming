@@ -9,12 +9,23 @@ void	alx_putnbr(int n, int m)
 	if (n * m < 10)
 	{
 		if (m)
+		{
 			putchar(' ');
+			putchar(' ');
+		}
 		putchar('0' + n * m);
+	}
+	else if(n * m < 100)
+	{
+		if (m)
+			putchar(' ');
+		putchar('0' + (n * m) / 10);
+		putchar('0' + (n * m) % 10);
 	}
 	else
 	{
-		putchar('0' + (n * m) / 10);
+		putchar('0' + (n * m) / 100);
+		putchar('0' + ((n * m) / 10) % 10);
 		putchar('0' + (n * m) % 10);
 	}
 }
