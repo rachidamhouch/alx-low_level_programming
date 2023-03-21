@@ -12,8 +12,9 @@ int	main(void)
 
 	fib1 = 1;
 	fib2 = 2;
-	printf("%ld, %ld ,", fib1, fib2);
-	for (i = 3; i <= 50; i++)
+	i = 2;
+	printf("%ld, %ld, ", fib1, fib2);
+	while (i < 50)
 	{
 	    next = fib1 + fib2;
 	    printf("%ld", next);
@@ -21,6 +22,7 @@ int	main(void)
 			printf(", ");
 	    fib1 = fib2;
 	    fib2 = next;
+		i++;
 	}
 	printf("\n");
 	return (0);
