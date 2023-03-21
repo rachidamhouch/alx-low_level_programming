@@ -15,25 +15,28 @@ void	alx_putnbr(int n)
 	}
 	if (nbr < 10)
 		putchar(nbr + '0');
-	alx_putnbr(nbr / 10);
-	alx_putnbr(nbr % 10);
+	else
+	{
+		alx_putnbr(nbr / 10);
+		alx_putnbr(nbr % 10);
+	}
 }
 
 /**
- * add - function that adds two integers and returns the result.
+ * print_to_98 - function that prints all natural numbers from n to 98.
  * @n: first arg.
  */
 void print_to_98(int n)
 {
-	while(1)
+	while (1)
 	{
 		alx_putnbr(n);
 		if (n > 98)
 			n--;
 		else if (n < 98)
 			n++;
-		else 
-			break ;
+		else
+			break;
 		putchar(',');
 		putchar(' ');
 	}
