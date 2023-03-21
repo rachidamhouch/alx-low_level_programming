@@ -5,18 +5,18 @@
  */
 int	main(void)
 {
-	int				i;
-    long long int	fib1;
-	long long int	fib2;
-	long long int	next;
+	int			i;
+    long int	fib1;
+	long int	fib2;
+	long int	next;
 
 	fib1 = 1;
 	fib2 = 2;
-    printf("%lld, %lld ", fib1, fib2);
+    printf("%ld, %ld ", fib1, fib2);
     for(i=3; i<=50; i++)
 	{
         next = fib1 + fib2;
-        printf("%lld", next);
+        printf("%ld", next);
 		if (i != 50)
 			printf(", ");
         fib1 = fib2;
