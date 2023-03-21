@@ -1,19 +1,21 @@
 #include "main.h"
 /**
  * alx_putnbr - prints numbers < 1000
- * @n: first parameter
+ * @n: first arg'
+ * @m: second arg.
  */
-void	alx_putnbr(int n)
+void	alx_putnbr(int n, int m)
 {
-	if (n < 10)
+	if (n * m < 10)
 	{
-		putchar(' ');
-		putchar('0' + n);
+		if (m)
+			putchar(' ');
+		putchar('0' + n * m);
 	}
 	else
 	{
-		putchar('0' + n / 10);
-		putchar('0' + n % 10);
+		putchar('0' + (n * m) / 10);
+		putchar('0' + (n * m) % 10);
 	}
 }
 
@@ -31,7 +33,7 @@ void times_table(void)
 		j = 0;
 		while (j < 10)
 		{
-			alx_putnbr(i * j);
+			alx_putnbr(i, j);
 			if (j != 9)
 			{
 				putchar(',');
