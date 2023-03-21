@@ -2,6 +2,7 @@
 /**
  * fibonacci - fibonacci
  * Return: 0 if the program finish whitout errors
+ * @index: First arg.
  */
 int	fibonacci(int index)
 {
@@ -20,6 +21,6 @@ int	fibonacci(int index)
  */
 int	main(void)
 {
-	printf("%d\n", fibonacci(3));
+	printf("%d\n", fibonacci(0));
 	return (0);
 }
