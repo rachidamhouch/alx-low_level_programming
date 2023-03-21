@@ -9,6 +9,7 @@ void	print_alphabet(void)
 	a = 'a';
 	while (a <= 'z')
 		putchar(a++);
+	putchar('\n');
 }
 
 /**
@@ -24,5 +25,4 @@ void	print_alphabet_x10(void)
 		print_alphabet();
 		i++;
 	}
-	putchar('\n');
 }
