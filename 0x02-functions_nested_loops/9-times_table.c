@@ -29,11 +29,11 @@ void times_table(void)
 		while (j < 10)
 		{
 			alx_putnbr(i * j);
+			if (j != 9)
+				putchar(',');
 			if (i * j < 10)
 				putchar(' ');
 			putchar(' ');
-			if (j != 9)
-				putchar(',');
 			j++;
 		}
 		putchar('\n');
