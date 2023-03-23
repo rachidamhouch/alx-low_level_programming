@@ -35,7 +35,7 @@ int main(void)
 	long int max;
 	long int i;
 
-	n = 1231952;
+	n = 612852475143;
 	while (i <= n)
 	{
 		while (is_prime(i) && n % i == 0)
