@@ -1,7 +1,7 @@
 # include "main.h"
 
 /**
- * _isupper - function that checks for alphabetic character.
+ * _isupper - function that checks for uppercase character..
  * @c: first arg.
  * Return: Returns 1 if c is uppercase, Returns 0 otherwise.
  */
