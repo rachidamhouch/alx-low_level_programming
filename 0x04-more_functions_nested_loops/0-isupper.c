@@ -1,6 +1,4 @@
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+# include "main.h"
 
 /**
  * _isupper - function that checks for alphabetic character.
