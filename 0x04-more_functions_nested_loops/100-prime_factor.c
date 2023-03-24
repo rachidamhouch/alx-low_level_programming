@@ -34,17 +34,20 @@ int main(void)
 	long int n;
 	long int max;
 	long int i;
+	long int sq;
 
 	n = 612852475143;
-	while (i <= n)
+	sq = sqrt(n);
+	max = 1;
+	while (i <= sq)
 	{
 		while (is_prime(i) && n % i == 0)
 		{
-			max = i;
+			max *= i;
 			n /= i;
 		}
 		i++;
 	}
-	printf("%ld\n", max);
+	printf("%ld\n", n);
 	return (0);
 }
