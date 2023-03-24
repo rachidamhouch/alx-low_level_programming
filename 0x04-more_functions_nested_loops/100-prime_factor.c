@@ -39,6 +39,7 @@ int main(void)
 	n = 612852475143;
 	sq = sqrt(n);
 	max = 1;
+	i = 0;
 	while (i <= sq)
 	{
 		while (is_prime(i) && n % i == 0)
