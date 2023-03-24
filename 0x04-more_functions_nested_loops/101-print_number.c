@@ -14,7 +14,7 @@ void	print_number(int n)
 		_putchar(n + '0');
 	else
 	{
-		alx_putnbr(n / 10);
-		alx_putnbr(n % 10);
+		print_number(n / 10);
+		print_number(n % 10);
 	}
 }
