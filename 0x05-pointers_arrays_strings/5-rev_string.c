@@ -6,7 +6,7 @@
 /*   By: ramhouch <ramhouch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 20:56:37 by ramhouch          #+#    #+#             */
-/*   Updated: 2023/03/27 21:01:05 by ramhouch         ###   ########.fr       */
+/*   Updated: 2023/03/27 21:02:16 by ramhouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void rev_string(char *s)
 	j = 0;
 	while (j < _strlen(s) / 2)
 	{
-		swap_char(s[j], s[i]);
+		swap_char(s + j, s + i);
 		j++;
 		i--;
 	}
