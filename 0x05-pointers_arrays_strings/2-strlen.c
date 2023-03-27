@@ -24,5 +24,5 @@ int _strlen(char *s)
 	i = 0;
 	while (s[i])
 		i++;
-	return (0);
+	return (i);
 }
