@@ -28,7 +28,8 @@ int _strlen(char *s)
 }
 
 /**
- * print_rev - function that prints a string, in reverse, followed by a new line.
+ * print_rev - function that prints a string,
+ * in reverse, followed by a new line.
  * @s: arg 1.
  */
 void print_rev(char *s)
