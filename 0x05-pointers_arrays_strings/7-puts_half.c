@@ -35,7 +35,11 @@ void	puts_half(char *str)
 {
 	int	i;
 
-	i = _strlen(str) / 2;
+	i = _strlen(str);
+	if (i % 2 == 0)
+		i /= 2;
+	else
+		i = i / 2 + 1;
 	while (str[i])
 	{
 		write(1, str + i, 1);
