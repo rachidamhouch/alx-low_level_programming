@@ -6,7 +6,7 @@
 /*   By: ramhouch <ramhouch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 20:56:37 by ramhouch          #+#    #+#             */
-/*   Updated: 2023/03/27 21:00:20 by ramhouch         ###   ########.fr       */
+/*   Updated: 2023/03/27 21:01:05 by ramhouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * swap_int - function that swaps the values of two integers.
+ * swap_char - function that swaps the values of two integers.
  * @a: arg 1.
  * @b: arg 2.
  */
-void swap_int(char *a, char *b)
+void swap_char(char *a, char *b)
 {
 	char	i;
 
@@ -53,7 +53,7 @@ void rev_string(char *s)
 	j = 0;
 	while (j < _strlen(s) / 2)
 	{
-		swap_int(s[j], s[i]);
+		swap_char(s[j], s[i]);
 		j++;
 		i--;
 	}
