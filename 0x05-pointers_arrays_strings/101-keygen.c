@@ -6,7 +6,7 @@
 /*   By: ramhouch <ramhouch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 00:13:30 by ramhouch          #+#    #+#             */
-/*   Updated: 2023/03/28 00:19:17 by ramhouch         ###   ########.fr       */
+/*   Updated: 2023/03/28 00:25:36 by ramhouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,26 @@
  */
 int main(void)
 {
-	printf("HccccccNNN545@.\\n");
+	int pass[100];
+	int i, sum, n;
+
+	sum = 0;	
+
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
+
 	return (0);
 }
