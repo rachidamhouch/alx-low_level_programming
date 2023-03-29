@@ -33,7 +33,7 @@ int	is_sep(char	s)
 	return (0);
 }
 /**
- * string_toupper - function that capitalizes all words of a string.
+ * cap_string - function that capitalizes all words of a string.
  * @str: Arg 1.
  * Return: A pointer to the resulting string.
  */
