@@ -27,7 +27,7 @@ int	check(char	a, char	b)
 
 /**
  * leet - function that encodes a string into 1337.
- * @str: Arg 1.
+ * @s: Arg 1.
  * Return: A pointer to the resulting string.
  */
 char	*leet(char *s)
