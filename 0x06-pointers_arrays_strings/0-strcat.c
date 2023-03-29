@@ -13,9 +13,10 @@
 # include "main.h"
 
 /**
- * _strcat - function that concatenates two strings.
- * @dest: arg 1.
- * @src: arg 2.
+ * _strcat - Function that concatenates two strings.
+ * @dest: Arg 1.
+ * @src: Arg 2.
+ * Return: A pointer to the resulting string.
  */
 char	*_strcat(char *dest, char *src)
 {
