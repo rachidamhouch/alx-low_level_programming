@@ -6,7 +6,7 @@
 /*   By: ramhouch <ramhouch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 22:31:51 by ramhouch          #+#    #+#             */
-/*   Updated: 2023/03/29 22:52:50 by ramhouch         ###   ########.fr       */
+/*   Updated: 2023/03/29 22:54:18 by ramhouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(void)
    * - only one statement
    * - you are not allowed to code anything else than this line of code
    */
-  *(p + 4) = 98;
+  *(p + 4) = 98
   ;
   /* ...so that this prints 98\n */
   printf("a[2] = %d\n", a[2]);
