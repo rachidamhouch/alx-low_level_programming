@@ -19,11 +19,14 @@
  */
 char	*string_toupper(char *a)
 {
+	char	*n;
+
+	n = a;
 	while (*a)
 	{
 		if (*a >= 'a' && *a <= 'z')
 			*a = *a - 'a' - 'A';
 		a++;
 	}
-	return (a);
+	return (n);
 }
