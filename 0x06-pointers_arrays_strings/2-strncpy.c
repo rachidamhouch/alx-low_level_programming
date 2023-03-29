@@ -24,10 +24,12 @@ char	*_strncpy(char *dest, char *src, int n)
 	int	y;
 
 	y = 0;
-	while (y < n)
+	while (src[y] && y < n)
 	{
 		dest[y] = src[y];
 		y++;
 	}
+	while (y < n)
+		dest[y++] = '\0';
 	return (dest);
 }
