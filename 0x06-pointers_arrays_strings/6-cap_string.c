@@ -46,7 +46,7 @@ char	*cap_string(char *str)
 	capitalizes = 1;
 	while (str[i])
 	{
-		if(is_sep(str[i]))
+		if (is_sep(str[i]))
 			capitalizes = 1;
 		else if (str[i] >= 'a' && str[i] <= 'z' && capitalizes)
 		{
