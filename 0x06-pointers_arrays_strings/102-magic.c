@@ -1,15 +1,3 @@
-/* ******************************************* */
-/*                                             */
-/*                                             */
-/*   102-magic.c                               */
-/*                                             */
-/*   By: ramhouch <ramhouch@student.42.fr>     */
-/*                                             */
-/*   Created: 2023/03/30 00:37:18 by ramhouch  */
-/*   Updated: 2023/03/30 00:37:19 by ramhouch  */
-/*                                             */
-/* ******************************************* */
-
 #include <stdio.h>
 
 int main(void)
@@ -28,7 +16,7 @@ int main(void)
    * - only one statement
    * - you are not allowed to code anything else than this line of code
    */
-  *(p + 5) = 98;
+  *(p + 4) = 98;
   /* ...so that this prints 98\n */
   printf("a[2] = %d\n", a[2]);
   return (0);
