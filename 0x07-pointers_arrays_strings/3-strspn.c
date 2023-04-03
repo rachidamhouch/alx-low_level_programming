@@ -27,20 +27,23 @@ unsigned int	_strspn(char *s, char *accept)
 	int	flag;
 
 	f = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
+	i = 0;
+	while (s[i])
 	{
 		flag = 0;
-		for (j = 0; accept[j] != '\0'; j++)
+		j = 0;
+		while (accept[j])
 		{
 			if (s[i] == accept[j])
 			{
 				f++;
 				flag = 1;
 			}
+			j++;
 		}
 		if (flag == 0)
 			return (f);
+		i++;
 	}
 	return (0);
 }
