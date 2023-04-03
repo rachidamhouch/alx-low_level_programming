@@ -46,7 +46,7 @@ char	*_strstr(char *haystack, char *needle)
 	while (haystack[i])
 	{
 		if (haystack[i] == needle[0])
-			if (ft_strncmp(haystack + i, needle, lenn) == 0)
+			if (strncmp(haystack + i, needle, lenn) == 0)
 				return ((char *)(haystack + i));
 		i++;
 	}

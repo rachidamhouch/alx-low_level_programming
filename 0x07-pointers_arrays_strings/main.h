@@ -5,6 +5,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <time.h>
+# include <string.h>
 
 void	        *_memset(char *s, char b, unsigned int n);
 char	        *_memcpy(char *dest, char *src, unsigned int n);
