@@ -6,14 +6,14 @@
 /*   By: ramhouch <ramhouch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 23:52:43 by ramhouch          #+#    #+#             */
-/*   Updated: 2023/04/03 23:57:58 by ramhouch         ###   ########.fr       */
+/*   Updated: 2023/04/03 23:58:37 by ramhouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
 /**
- * _strstr - function that prints the chessboard.
+ * print_chessboard - function that prints the chessboard.
  * @a: Arg 1.
  */
 void print_chessboard(char (*a)[8])
