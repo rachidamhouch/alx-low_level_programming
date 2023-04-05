@@ -12,7 +12,7 @@ int is_palindrome2(char *s, int i, int y)
 {
 	if (s[i] != s[y])
 		return (0);
-	if (i >= y)
+	if (y == 0)
 		return (1);
 	return (is_palindrome2(s, i + 1, y - 1));
 }
