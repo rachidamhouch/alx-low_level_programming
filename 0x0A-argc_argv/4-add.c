@@ -37,7 +37,7 @@ int _atoi(char *s)
 
 /**
  * _isnum - function that checks if is num.
- * @c: first arg.
+ * @str: first arg.
  * Return: Returns 1 if is num.
  */
 int _isnum(char	*str)
