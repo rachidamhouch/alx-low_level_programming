@@ -42,7 +42,8 @@ int	main(int ac, char **av)
 			printf("Error\n");
 			return (1);
 		}
-		sum += atoi(av[i]);
+		if (atoi(av[i]) > 0)
+			sum += atoi(av[i]);
 		i++;
 	}
 	printf("%d\n", sum);
