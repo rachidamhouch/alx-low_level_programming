@@ -10,10 +10,10 @@
  */
 int	main(int ac, char **av)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i < ac)
-        printf("%s\n", av[i++]);
-    return (0);
+	i = 0;
+	while (i < ac)
+		printf("%s\n", av[i++]);
+	return (0);
 }
