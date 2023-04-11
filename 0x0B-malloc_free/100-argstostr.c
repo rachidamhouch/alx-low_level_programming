@@ -51,6 +51,9 @@ char	*argstostr(int ac, char **av)
 	str = 0;
 	i = 0;
 	while (i < ac)
+	{
 		str = str_concat(str, av[i++]);
+		str = str_concat(str, "\n");
+	}
 	return (str);
 }
