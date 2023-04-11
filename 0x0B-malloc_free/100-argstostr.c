@@ -57,13 +57,3 @@ char	*argstostr(int ac, char **av)
 	}
 	return (str);
 }
-
-int main(int ac, char **av)
-{
-	char *s;
-
-	s = argstostr(ac, av);
-	printf("%d", strlen(s));
-	free(s);
-	return (0);
-}
