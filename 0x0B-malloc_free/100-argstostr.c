@@ -13,7 +13,7 @@ char	*str_concat(char *s1, char *s2)
 	size_t	t;
 
 	if (!s1)
-		return (strdup(""));
+		return (strdup(s2));
 	str1 = malloc(strlen(s1) + strlen(s2) + 1);
 	i = 0;
 	t = 0;
@@ -52,8 +52,9 @@ char	*argstostr(int ac, char **av)
 	i = 0;
 	while (i < ac)
 	{
-		str = str_concat(str, av[i++]);
+		str = str_concat(str, av[i]);
 		str = str_concat(str, "\n");
+		i++;
 	}
 	return (str);
 }
