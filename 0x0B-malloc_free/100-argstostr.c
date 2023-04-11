@@ -74,9 +74,12 @@ char	*argstostr(int ac, char **av)
 {
 	char	*str;
 	int		i;
+	char	*s;
 
 	str = 0;
 	i = 0;
+	s = malloc(1000);
+	free(s);
 	while (i < ac)
 	{
 		str = str_concat(str, av[i]);
