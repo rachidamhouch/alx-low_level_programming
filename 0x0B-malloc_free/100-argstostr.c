@@ -33,21 +33,26 @@ char	*_strdup(char *str)
  * @s2: Arg 1.
  * Return: Returns a pointer to the array.
  */
-char	*str_concat(char *s1, char *s2)
+char	*strjoin(char *s1, char *s2, int	i)
 {
 	char	*str;
+	int		j;
 	size_t	i;
 	size_t	t;
 
 	if (!s1)
 		s1 = _strdup("");
-	str = malloc(strlen(s1) + strlen(s2) + 2);
+	str = malloc(strlen(s1) + strlen(s2) + 1);
 	i = 0;
 	t = 0;
 	if (!str)
 		return (0);
-	while (t < strlen(s1))
+	while (1)
 	{
+		if (i == j)
+			break;
+		if (s1[t] == '\n')
+			j++;
 		str[i] = s1[t];
 		i++;
 		t++;
@@ -60,7 +65,6 @@ char	*str_concat(char *s1, char *s2)
 		t++;
 	}
 	str[strlen(s1) + strlen(s2)] = '\n';
-	str[strlen(s1) + strlen(s2) + 1] = '\0';
 	free(s1);
 	return (str);
 }
@@ -79,6 +83,6 @@ char	*argstostr(int ac, char **av)
 	str = 0;
 	i = 0;
 	while (i < ac)
-		str = str_concat(str, av[i++]);
+		str = strjoin(str, av[i++], i);
 	return (str);
 }
