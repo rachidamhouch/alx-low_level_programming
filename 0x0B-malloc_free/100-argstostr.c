@@ -1,73 +1,25 @@
 #include "main.h"
 
 /**
- * _strdup - function that returns a pointer
- * to a newly allocated space in memory, which
- * contains a copy of the string given as a parameter.
- * @str: Arg 1.
- * Return: Returns a pointer to the array.
+ * _strcat - Function that concatenates two strings.
+ * @dest: Arg 1.
+ * @src: Arg 2.
+ * Return: A pointer to the resulting string.
  */
-char	*_strdup(char *str)
+char	*_strcat(char *dest, char *src)
 {
-	char	*str1;
-	size_t	i;
+	int	i;
+	int	y;
 
-	if (!str)
-		return (0);
-	str1 = malloc(strlen(str) + 1);
 	i = 0;
-	if (!str1)
-		return (0);
-	while (i < strlen(str))
-	{
-		str1[i] = str[i];
+	y = 0;
+	while (dest[i])
 		i++;
-	}
-	str1[strlen(str)] = '\0';
-	return (str1);
-}
-
-/**
- * str_concat - function that concatenates two strings.
- * @s1: Arg 1.
- * @s2: Arg 1.
- * Return: Returns a pointer to the array.
- */
-char	*strjoin(char *s1, char *s2, int n)
-{
-	char	*str;
-	int		j;
-	size_t	i;
-	size_t	t;
-
-	if (!s1)
-		s1 = _strdup("");
-	str = malloc(strlen(s1) + strlen(s2) + 1);
-	i = 0;
-	t = 0;
-	j = 0;
-	if (!str)
-		return (0);
-	while (1)
-	{
-		if (n == j)
-			break;
-		if (s1[t] == '\n')
-			j++;
-		str[i] = s1[t];
-		i++;
-		t++;
-	}
-	t = 0;
-	while (t < strlen(s2))
-	{
-		str[i] = s2[t];
-		i++;
-		t++;
-	}
-	str[strlen(s1) + strlen(s2)] = '\n';
-	free(s1);
-	return (str);
+	while (src[y])
+		dest[i++] = src[y++];
+	dest[i] = '\n';
+	dest[i + 1] = '\0';
+	return (dest);
 }
 
 /**
@@ -78,15 +30,21 @@ char	*strjoin(char *s1, char *s2, int n)
  */
 char	*argstostr(int ac, char **av)
 {
-	char	*str;
-	int		i;
+	char		*str;
+	int			i;
+	size_t		len;
 
-	str = 0;
+	i = 0;
+	len = 0;
+	while (i < ac)
+		len += strlen(av[i++]) + 1;
+	str = malloc(len + 1);
+	if (!str)
+		return (NULL);
+	str[0] = '\0';
 	i = 0;
 	while (i < ac)
-	{
-		str = strjoin(str, av[i], i);
-		i++;
-	}
+		_strcat(str, av[i++]);
+	str[len] = '\0';
 	return (str);
 }
