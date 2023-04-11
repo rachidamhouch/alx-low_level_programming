@@ -39,7 +39,7 @@ int **alloc_grid(int width, int height)
 		grid[i] = calloc(sizeof(int), width);
 		if (!grid[i])
 		{
-			free_grid(grid, i);
+			free_grid(grid, height);
 			return (0);
 		}
 		i++;
