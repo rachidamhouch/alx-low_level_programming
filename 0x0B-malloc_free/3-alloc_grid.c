@@ -26,9 +26,9 @@ int **alloc_grid(int width, int height)
 		grid[i] = calloc(sizeof(int), width);
 		if (!grid[i])
 		{
+			free(grid);
 			while (j < i)
 				free(grid[j++]);
-			free(grid);
 			return (NULL);
 		}
 		i++;
