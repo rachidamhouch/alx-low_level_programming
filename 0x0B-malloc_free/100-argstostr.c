@@ -41,7 +41,7 @@ char	*str_concat(char *s1, char *s2)
 
 	if (!s1)
 		return (_strdup(s2));
-	str = malloc(strlen(s1) + strlen(s2) + 1);
+	str = malloc(strlen(s1) + strlen(s2) + 2);
 	i = 0;
 	t = 0;
 	if (!str)
@@ -59,7 +59,8 @@ char	*str_concat(char *s1, char *s2)
 		i++;
 		t++;
 	}
-	str[strlen(s1) + strlen(s2)] = '\0';
+	str[strlen(s1) + strlen(s2)] = '\n';
+	str[strlen(s1) + strlen(s2) + 1] = '\0';
 	free(s1);
 	return (str);
 }
@@ -74,17 +75,10 @@ char	*argstostr(int ac, char **av)
 {
 	char	*str;
 	int		i;
-	char	*s;
 
 	str = 0;
 	i = 0;
-	s = malloc(1000);
-	free(s);
 	while (i < ac)
-	{
-		str = str_concat(str, av[i]);
-		str = str_concat(str, "\n");
-		i++;
-	}
+		str = str_concat(str, av[i++]);
 	return (str);
 }
