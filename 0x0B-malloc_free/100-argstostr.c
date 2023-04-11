@@ -14,7 +14,7 @@ char	*str_concat(char *s1, char *s2)
 
 	if (!s1)
 		return (strdup(s2));
-	str1 = malloc(strlen(s1) + strlen(s2) + 1);
+	str1 = malloc(strlen(s1) + strlen(s2));
 	i = 0;
 	t = 0;
 	if (!str1)
@@ -32,7 +32,6 @@ char	*str_concat(char *s1, char *s2)
 		i++;
 		t++;
 	}
-	str1[strlen(s1) + strlen(s2)] = '\0';
 	free(s1);
 	return (str1);
 }
@@ -57,4 +56,14 @@ char	*argstostr(int ac, char **av)
 		i++;
 	}
 	return (str);
+}
+
+int main(int ac, char **av)
+{
+	char *s;
+
+	s = argstostr(ac, av);
+	printf("%d", strlen(s));
+	free(s);
+	return (0);
 }
