@@ -90,8 +90,3 @@ char	*argstostr(int ac, char **av)
 	}
 	return (str);
 }
-
-int main(int ac, char **av)
-{
-	printf("%s", argstostr(ac, av));
-}
