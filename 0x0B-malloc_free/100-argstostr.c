@@ -8,32 +8,33 @@
  */
 char	*str_concat(char *s1, char *s2)
 {
-	char	*str1;
+	char	*str;
 	size_t	i;
 	size_t	t;
 
 	if (!s1)
 		return (strdup(s2));
-	str1 = malloc(strlen(s1) + strlen(s2));
+	str = malloc(strlen(s1) + strlen(s2) + 1);
 	i = 0;
 	t = 0;
-	if (!str1)
+	if (!str)
 		return (0);
 	while (t < strlen(s1))
 	{
-		str1[i] = s1[t];
+		str[i] = s1[t];
 		i++;
 		t++;
 	}
 	t = 0;
 	while (t < strlen(s2))
 	{
-		str1[i] = s2[t];
+		str[i] = s2[t];
 		i++;
 		t++;
 	}
+	str[strlen(s1) + strlen(s2)] = '\0';
 	free(s1);
-	return (str1);
+	return (str);
 }
 
 /**
