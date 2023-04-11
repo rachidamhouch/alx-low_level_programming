@@ -33,7 +33,7 @@ char	*_strdup(char *str)
  * @s2: Arg 1.
  * Return: Returns a pointer to the array.
  */
-char	*strjoin(char *s1, char *s2, int	i)
+char	*strjoin(char *s1, char *s2, int n)
 {
 	char	*str;
 	int		j;
@@ -49,7 +49,7 @@ char	*strjoin(char *s1, char *s2, int	i)
 		return (0);
 	while (1)
 	{
-		if (i == j)
+		if (n == j)
 			break;
 		if (s1[t] == '\n')
 			j++;
@@ -83,6 +83,9 @@ char	*argstostr(int ac, char **av)
 	str = 0;
 	i = 0;
 	while (i < ac)
-		str = strjoin(str, av[i++], i);
+	{
+		str = strjoin(str, av[i], i);
+		i++;
+	}
 	return (str);
 }
