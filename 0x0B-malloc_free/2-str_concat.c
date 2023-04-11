@@ -40,7 +40,7 @@ char	*str_concat(char *s1, char *s2)
 	size_t	t;
 
 	if (!s1 && !s2)
-		return (0);
+		return (_strdup(""));
 	if (!s1)
 		return (_strdup(s2));
 	if (!s2)
