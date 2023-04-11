@@ -45,6 +45,7 @@ char	*strjoin(char *s1, char *s2, int n)
 	str = malloc(strlen(s1) + strlen(s2) + 1);
 	i = 0;
 	t = 0;
+	j = 0;
 	if (!str)
 		return (0);
 	while (1)
@@ -88,4 +89,9 @@ char	*argstostr(int ac, char **av)
 		i++;
 	}
 	return (str);
+}
+
+int main(int ac, char **av)
+{
+	printf("%s", argstostr(ac, av));
 }
