@@ -9,11 +9,11 @@
  */
 char	*string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int		len1;
-	int		len2;
-	char	*str;
-	int		i;
-	int		j;
+	unsigned int		len1;
+	unsigned int		len2;
+	char				*str;
+	unsigned int		i;
+	unsigned int		j;
 
 	if (!s1 || !s2)
 		return (NULL);
