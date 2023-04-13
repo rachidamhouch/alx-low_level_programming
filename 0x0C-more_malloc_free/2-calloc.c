@@ -10,6 +10,8 @@ void	*_calloc(unsigned int nmemb, unsigned int size)
 {
 	void	*ptr;
 
+	if (!nmemb || !size)
+		return (0);
 	ptr = malloc(nmemb * size);
 	if (ptr)
 		memset(ptr, 0, nmemb * size);
