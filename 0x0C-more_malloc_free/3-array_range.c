@@ -13,7 +13,7 @@ int	*array_range(int min, int max)
 
 	if (min > max)
 		return (0);
-	tab = malloc (sizeof(int) * (max - min + 1));
+	tab = malloc(sizeof(int) * (max - min + 1));
 	i = 0;
 	if (!tab)
 		return (0);
