@@ -8,5 +8,10 @@
  */
 void	*_calloc(unsigned int nmemb, unsigned int size)
 {
-	return (malloc(nmemb * size));
+	void	*ptr;
+
+	ptr = malloc(nmemb * size);
+	if (ptr)
+		memset(ptr, 0, nmemb * size);
+	return (ptr);
 }
