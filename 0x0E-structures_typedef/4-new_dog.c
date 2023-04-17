@@ -1,6 +1,10 @@
 #include "dog.h"
 
-
+/**
+ * _strdup - function that dup a string.
+ * @str: Arg 1.
+ * Return: deep copy of a string.
+ */
 char	*_strdup(char *str)
 {
 	int		i;
