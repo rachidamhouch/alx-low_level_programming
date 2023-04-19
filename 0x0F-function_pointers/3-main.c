@@ -10,6 +10,7 @@ int main(int ac, char **av)
 {
 	int	a;
 	int	b;
+	int result;
 	int (*func)(int, int);
 
 	if (ac != 4)
@@ -25,6 +26,7 @@ int main(int ac, char **av)
 		printf("Error\n");
 		return (99);
 	}
-	printf("%d\n", func(a, b));
+	result = func(a, b);
+	printf("%d\n", result);
 	return (0);
 }
