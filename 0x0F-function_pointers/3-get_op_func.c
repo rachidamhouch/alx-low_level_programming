@@ -10,20 +10,18 @@
 int (*get_op_func(char *s))(int, int)
 {
 	int	i;
-	char t[5] = {'+', '-', '*', '/', '%'};
-	int (*f[5])(int, int) = {op_add, op_sub, op_mul, op_div, op_mod};
-
-
+	op_t t[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod}
+	};
 	i = 0;
-	if (s[1])
-	{
-		printf("Error\n");
-		exit(99);
-	}
 	while (i < 5)
 	{
-		if (*s == t[i])
-			return (f[i]);
+		if (!strcmp(s,  t[i].op))
+			return (t[i].f);
 		i++;
 	}
 	printf("Error\n");
