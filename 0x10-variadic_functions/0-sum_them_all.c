@@ -5,20 +5,18 @@
  * @n: Arg 1.
  * Return: the sum of all its parameters.
  */
-int	sum_them_all(const unsigned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
-	va_list 			ptr;
-	int					sum;
-	unsigned int		i;
+	unsigned int i;
+	int sum = 0;
+	va_list list;
 
-	sum = 0;
-	i = 0;
-	va_start(ptr, n);
-	while (i < n)
-	{
-		sum += va_arg(ptr, int);
-		i++;
-	}
-	va_end(ptr);
+	va_start(list, n);
+
+	for (i = 0; i < n; i++)
+		sum += va_arg(list, int);
+
+	va_end(list);
+
 	return (sum);
 }
