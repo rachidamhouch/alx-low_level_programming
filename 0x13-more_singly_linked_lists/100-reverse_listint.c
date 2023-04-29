@@ -29,7 +29,7 @@ listint_t *reverse_listint(listint_t **head)
 {
 	listint_t	*tmp, *head2 = NULL;
 
-	if (!head || *head)
+	if (!head || !*head)
 		return (NULL);
 	tmp = *head;
 	while (tmp)
