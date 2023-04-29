@@ -19,21 +19,16 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		if (i == index)
 		{
-			if (!i && !tmp->next)
-			{
-				free(*head);
-				*head = NULL;
-			}
-			else if (i)
+			if (i)
 				old->next = tmp->next;
 			else
 				*head = tmp->next;
 			free(tmp);
-			break;
+			return (1);
 		}
 		old = tmp;
 		tmp = tmp->next;
 		i++;
 	}
-	return (1);
+	return (-1);
 }
