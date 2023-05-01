@@ -8,7 +8,9 @@
  */
 listint_t *find_listint_loopp(listint_t *head)
 {
+	int i;
 	(void)head;
+	(void)i;
 	return (NULL);
 }
 
