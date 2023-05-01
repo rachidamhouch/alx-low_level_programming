@@ -20,8 +20,6 @@ listadr_t *add_nodeptr(listadr_t **head, const listint_t *ptr)
 	return (node);
 }
 
-#include "lists.h"
-
 /**
  * free_listptr - function that frees a listint_t list.
  * @head: Arg 1.
