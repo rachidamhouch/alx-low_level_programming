@@ -7,7 +7,7 @@
  * @ptr: arg 2.
  * Return: the address of the new element, or NULL if it failed.
  */
-listadr_t *add_nodeptr(listadr_t **head, const listint_t *ptr)
+static listadr_t *add_nodeptr(listadr_t **head, const listint_t *ptr)
 {
 	listadr_t	*node;
 
@@ -24,7 +24,7 @@ listadr_t *add_nodeptr(listadr_t **head, const listint_t *ptr)
  * free_listptr - function that frees a listint_t list.
  * @head: Arg 1.
  */
-void free_listptr(listadr_t *head)
+static void free_listptr(listadr_t *head)
 {
 	listadr_t *tmp = head;
 
@@ -42,7 +42,7 @@ void free_listptr(listadr_t *head)
  * @ptr: arg 2.
  * Return: 0 or 1.
  */
-int is_exists(listadr_t *head, const listint_t *ptr)
+static int is_exists(listadr_t *head, const listint_t *ptr)
 {
 	while (head)
 	{
