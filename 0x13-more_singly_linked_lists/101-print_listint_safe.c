@@ -68,6 +68,8 @@ size_t print_listint_safe(const listint_t *head)
 	size_t	i = 0;
 	listadr_t	*h = NULL;
 
+	if (!head)
+		return (98);
 	while (head)
 	{
 		if (!is_exists(h, head))
@@ -79,7 +81,7 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			printf("-> [%p] %d\n", (void *)head, head->n);
 			free_listptr(h);
-			return (98);
+			return (i);
 		}
 		head = head->next;
 		i++;
