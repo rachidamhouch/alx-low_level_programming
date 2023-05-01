@@ -1,7 +1,5 @@
 #include "lists.h"
 
-#include "lists.h"
-
 /**
  * add_nodeptr - function that adds a new node
  * at the beginning of a listadr_t list.
