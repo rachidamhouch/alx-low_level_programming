@@ -10,6 +10,9 @@
  */
 int check(listint_t *head, int c, listint_t *ptr, int i)
 {
+	int m = 0;
+
+	(void)m;
 	while (head && i < c)
 	{
 		if (head == ptr)
