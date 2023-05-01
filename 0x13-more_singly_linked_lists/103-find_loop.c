@@ -3,12 +3,14 @@
 /**
  * find_listint_loopp - function that finds the loop in a linked list.
  * @head: Arg 1.
+ * @i: arg 2.
  * Return: The address of the node where the
  * loop starts, or NULL if there is no loop.
  */
-listint_t *find_listint_loopp(int *head)
+listint_t *find_listint_loopp(listint_t *head, int i)
 {
 	(void)head;
+	(void)i;
 	return (NULL);
 }
 
