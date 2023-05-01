@@ -78,6 +78,7 @@ size_t free_listint_safe(listint_t **h)
 		}
 		else
 			break;
+		i++;
 	}
 	*h = NULL;
 	free_listptr(head);
