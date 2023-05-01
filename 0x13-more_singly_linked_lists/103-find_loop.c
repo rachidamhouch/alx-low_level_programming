@@ -12,6 +12,6 @@ listint_t *find_listint_loop(listint_t *head)
 
 	(void)i;
 	(void)t;
-	(void)head;;
+	(void)head;
 	return (NULL);
 }
