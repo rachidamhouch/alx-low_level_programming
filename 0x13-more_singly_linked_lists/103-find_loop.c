@@ -8,16 +8,7 @@
  */
 listint_t *find_listint_loopp(listint_t *head)
 {
-	listint_t *slow = head;
-	listint_t *fast = head;
-
-	while (slow && slow->next && fast && fast->next)
-	{
-		fast = fast->next->next;
-		slow = slow->next;
-		if (fast == slow)
-			return (fast);
-	}
+	(void)head;
 	return (NULL);
 }
 
