@@ -17,6 +17,5 @@ unsigned int binary_to_uint(const char *b)
 		n |= b[i] - '0';
 		i++;
 	}
-	printf("%u\n", n);
 	return (n);
 }
