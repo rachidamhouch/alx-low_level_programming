@@ -17,8 +17,7 @@ int main(int ac, char **av)
 		return (97);
 	}
 	fd_in = open(av[1], O_RDONLY);
-	fd_out = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	fd_out = open(av[2], O_WRONLY | O_APPEND);
+	fd_out = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	while ((nbyte = read(fd_in, buffer, 1024)))
 	{
 		if (fd_in == -1 || nbyte == -1)
