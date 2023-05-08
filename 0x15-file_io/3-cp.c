@@ -18,19 +18,19 @@ int main(int ac, char **av)
 	}
 	fd_in = open(av[1], O_RDONLY);
 	fd_out = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd_out = open(av[2], O_WRONLY | O_APPEND);
 	while ((nbyte = read(fd_in, buffer, 1024)))
 	{
 		if (fd_in == -1 || nbyte == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-			exit(98);
+			return (98);
 		}
 		if (write(fd_out, buffer, nbyte) == -1 || fd_out == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-			exit(99);
+			return (99);
 		}
-		fd_out = open(av[2], O_WRONLY | O_APPEND);
 	}
 	if (close(fd_in) == -1)
 	{
