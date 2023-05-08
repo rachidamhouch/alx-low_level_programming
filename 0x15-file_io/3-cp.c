@@ -23,7 +23,7 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	fd_out = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((nbyte = read(fd_in, buffer, 1024)))
+	while ((nbyte = read(fd_in, buffer, 1024)) > 0)
 	{
 		if (write(fd_out, buffer, nbyte) == -1 || fd_out == -1)
 		{
