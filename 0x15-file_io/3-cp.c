@@ -32,15 +32,5 @@ int main(int ac, char **av)
 		}
 		fd_out = open(av[2], O_WRONLY | O_APPEND);
 	}
-	if (close(fd_in) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_in);
-		exit(100);
-	}
-	if (close(fd_out) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_out);
-		exit(100);
-	}
 	return (0);
 }
