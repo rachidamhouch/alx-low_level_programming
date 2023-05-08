@@ -35,8 +35,6 @@ int main(int ac, char **av)
 	if (close(fd_in) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_in);
-		if (close(fd_out) == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_out);
 		return (100);
 	}
 	if (close(fd_out) == -1)
