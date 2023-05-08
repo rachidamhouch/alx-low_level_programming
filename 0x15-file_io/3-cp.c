@@ -8,7 +8,7 @@
  */
 int main(int ac, char **av)
 {
-	int		fd_in, fd_out;
+	int		fd_in, fd_out, nbyte;
 	char	buffer[1024];
 
 	if (ac != 3)
@@ -23,9 +23,9 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	fd_out = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while (read(fd_in, buffer, 1024))
+	while ((nbyte = read(fd_in, buffer, 1024)))
 	{
-		if (write(fd_out, buffer, 1024) == -1 || fd_out == -1)
+		if (write(fd_out, buffer, nbyte) == -1 || fd_out == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
