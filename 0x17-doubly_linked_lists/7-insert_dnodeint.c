@@ -17,14 +17,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (!node || !h)
 		return (NULL);
 	node->n = n;
-	while (hd)
+	while (hd->next)
 	{
 		if (i == idx)
 			break;
 		hd = hd->next;
 		i++;
 	}
-	if (!hd && idx > i)
+	if (!hd->next && idx > i)
 		return (NULL);
 	node->next = hd;
 	node->prev = hd->prev;
